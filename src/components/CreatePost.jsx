@@ -1,13 +1,25 @@
 import React, { useState } from "react"
+import {addDoc, collection} from "firebase/firestore"
+import {db,auth} from "../firebase"
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
 const [title,setTitle] = useState();
 const [postText,setPostText] = useState();
 
-const createPost = ()=>{
-  console.log(title);
-  console.log(postText);
-}
+const navigate = useNavigate();
+
+const createPost = async () => {
+  await addDoc(collection(db,"posts"),{
+    title: title,
+    postText: postText,
+    author: {
+      id: auth.currentUser.uid,
+      username: auth.currentUser.displayName
+    }
+  })
+  navigate("/");
+};
 
 return(
 <div className="min-h-screen bg-gray-100 flex items-center justify-center">
