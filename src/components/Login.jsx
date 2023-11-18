@@ -22,7 +22,7 @@ const Login = ({setIsAuth}) => {
         <p className="text-gray-600 mb-6">Googleアカウントを使用してログイン</p>
         <button 
           onClick={loginInWithGoogle}
-          className="bg-red-500 hover:bg-red-600 w-full text-white font-bold py-2 px-4 rounded transition duration-200">
+          className="bg-blue-500 hover:bg-red-600 w-full text-white font-bold py-2 px-4 rounded transition duration-200">
           Login with Google
         </button>
       </div>

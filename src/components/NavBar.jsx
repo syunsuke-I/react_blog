@@ -16,18 +16,18 @@ const NavBar = ({isAuth}) => {
       </Link>
       {!isAuth ?
       (
-            <Link to="/login" class="hover:text-white focus:bg-sky-200 focus:text-white focus:outline-none focus:ring-2 focus:bg-sky-200 active:bg-blue-700 active:text-yellow-300">
-            <FontAwesomeIcon icon={faArrowRightToBracket} className="mr-2"/>
-            ログイン
-          </Link>
-  )
+        <Link to="/login" class="hover:text-white focus:bg-sky-200 focus:text-white focus:outline-none focus:ring-2 focus:bg-sky-200 active:bg-blue-700 active:text-yellow-300">
+        <FontAwesomeIcon icon={faArrowRightToBracket} className="mr-2"/>
+          ログイン
+        </Link>
+      )
       :
-    (
-      <Link to="/logout" class="hover:text-white focus:bg-sky-200 focus:text-white focus:outline-none focus:ring-2 focus:bg-sky-200 active:bg-blue-700 active:text-yellow-300">
-      <FontAwesomeIcon icon={faArrowRightToBracket} className="mr-2"/>
-      ログアウト
-      </Link>
-    )}
+      (
+        <Link to="/logout" class="hover:text-white focus:bg-sky-200 focus:text-white focus:outline-none focus:ring-2 focus:bg-sky-200 active:bg-blue-700 active:text-yellow-300">
+        <FontAwesomeIcon icon={faArrowRightToBracket} className="mr-2"/>
+          ログアウト
+        </Link>
+      )}
     </nav>
   )
 };
