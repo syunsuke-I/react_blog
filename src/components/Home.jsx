@@ -26,10 +26,10 @@ const Home = () => {
         return(
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full mt-5">
               <div className="mb-4">
-                <h1 className="text-2xl font-bold text-gray-800">{post.postText}</h1>
+                <h1 className="text-2xl font-bold text-gray-800">{post.title}</h1>
               </div>
               <div className="mb-6">
-                <p className="text-gray-600">{post.title}</p>
+                <p className="text-gray-600">{post.postText}</p>
               </div>
               <div className="flex justify-between items-center">
                 <h3 className="text-lg font-medium text-gray-700">@{post.author.username}</h3>
